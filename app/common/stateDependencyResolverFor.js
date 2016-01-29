@@ -3,7 +3,7 @@ define(function(){
   return function stateDependencyResolverFor(stateConfig) {
 
     return {
-        resolver: ['$q', '$rootScope', '$timeout', '$location', function($q, $rootScope, $timeout, $location) {
+        resolver: ['$q', '$rootScope', function($q, $rootScope) {
             var deferred = $q.defer();
 
             require(stateConfig, function() {
