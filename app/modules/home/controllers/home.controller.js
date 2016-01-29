@@ -1,8 +1,18 @@
-'use strict';
-define(['modules/home/home.module'], function(app) {
+(function(){
 
-	app.controller('HomeController', ['$scope', function($scope) {
-		$scope.name = 'HOME';
-	}]);
-});
+	'use strict';
+
+	define(['modules/home/home.module'], function(app) {
+
+		app.controller('HomeController', HomeController);
+
+		HomeController.$inject = ['$scope'];
+
+		function HomeController($scope) {
+			$scope.name = 'Home';
+		}
+
+	});
+
+})();
 

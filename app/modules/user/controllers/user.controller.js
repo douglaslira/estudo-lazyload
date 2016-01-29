@@ -1,8 +1,18 @@
-'use strict';
-define(['modules/user/user.module'], function(app) {
+(function(){
 
-	app.controller('UserController', ['$scope', function($scope) {
-		$scope.name = 'User';
-	}]);
-});
+	'use strict';
+
+	define(['modules/user/user.module'], function(app) {
+
+		app.controller('UserController', UserController);
+
+		UserController.$inject = ['$scope'];
+
+		function UserController ($scope) {
+			$scope.name = 'User';
+		}
+
+	});
+
+})();
 

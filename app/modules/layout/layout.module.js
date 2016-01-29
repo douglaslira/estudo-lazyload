@@ -1,12 +1,17 @@
-'use strict';
-define(['angular', 'common/makeModuleLazyLoadable', 'modules/layout/layout.route'], function(angular, lazy, route) {
+(function(){
 
-    var app = angular.module('myApp.layout', []);
+    'use strict';
 
-    lazy('myApp.layout');
+    define(['angular', 'common/makeModuleLazyLoadable', 'modules/layout/layout.route'], function(angular, lazy, route) {
 
-    app.config(route);
+        var app = angular.module('myApp.layout', []);
 
-    return app;
-});
+        lazy('myApp.layout');
+
+        app.config(route);
+
+        return app;
+    });
+
+})();
 
